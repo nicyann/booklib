@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}"
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
+
     {% endblock %}
 
 </head>
@@ -35,6 +37,16 @@
                                aria-haspopup="true"
                                aria-expanded="false">Catégories <span class="caret"></span></a>
                                 {{ render(controller('App\\Controller\\CategoryController::dropdown')) }}
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app_author_new') }}" class="nav-link">
+                                Ajouter un auteur
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('box_index') }}" class="nav-link">
+                                Afficher les boites
+                            </a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
